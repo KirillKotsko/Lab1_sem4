@@ -12,6 +12,8 @@
 #include <conio.h>
 #include <vector>
 #include <iomanip>
+#include <sstream>
+#include <QMetaType>
 #include "DateWithTime.h"
 #include "DifferenceBetweenDateWithTime.h"
 #include "TimeIsNow.h"
@@ -125,7 +127,7 @@ public:
 	/**
 	* Show current date_with_time, date_with_time1, date_with_time2 in julian calendar.
 	*/
-	void show_julian_calendar();
+    stringstream show_julian_calendar();
 
 	/**
 	* Method calculate number of weekday by date_with_time
@@ -155,7 +157,7 @@ public:
 	/**
 	* Show alternative variant of date_with_time represent.
 	*/
-	void alternative_insert_of_date_with_time(int num_of_date_with_time);
+    stringstream alternative_insert_of_date_with_time(int num_of_date_with_time);
 
 	/**
 	* Overload of operator "=" for class TimeManagment.
@@ -184,3 +186,5 @@ private:
 	// Constant which represent ammount days of each month.
 	const int DAY_IN_MONTH[12] = { 31 , 28 , 31 , 30 , 31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
 };
+
+Q_DECLARE_METATYPE(TimeManagment)

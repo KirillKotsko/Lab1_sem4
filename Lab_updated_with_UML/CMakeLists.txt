@@ -49,6 +49,9 @@ if(ANDROID)
     firstdateform.cpp
     firstdateform.h
     firstdateform.ui
+    showdiffform.cpp
+    showdiffform.h
+    showdiffform.ui
   )
 else()
   add_executable(Lab_updated_with_UML
@@ -73,6 +76,9 @@ else()
     firstdateform.cpp
     firstdateform.h
     firstdateform.ui
+    showdiffform.cpp
+    showdiffform.h
+    showdiffform.ui
 
   )
 endif()

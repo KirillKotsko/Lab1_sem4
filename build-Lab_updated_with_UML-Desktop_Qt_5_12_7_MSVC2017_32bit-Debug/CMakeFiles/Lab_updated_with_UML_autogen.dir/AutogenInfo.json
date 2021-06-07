@@ -116,6 +116,11 @@
 			"EWIEGA46WW/moc_mainwindow.cpp"
 		],
 		[
+			"D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/showdiffform.h",
+			"MU",
+			"EWIEGA46WW/moc_showdiffform.cpp"
+		],
+		[
 			"D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/unit_test_framework.h",
 			"MU",
 			"EWIEGA46WW/moc_unit_test_framework.cpp"
@@ -187,6 +192,10 @@
 		[ "D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/main.cpp", "MU" ],
 		[
 			"D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/mainwindow.cpp",
+			"MU"
+		],
+		[
+			"D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/showdiffform.cpp",
 			"MU"
 		]
 	],

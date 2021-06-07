@@ -136,6 +136,15 @@ build CMakeFiles\Lab_updated_with_UML.dir\firstdateform.cpp.obj: CXX_COMPILER__L
   TARGET_COMPILE_PDB = CMakeFiles\Lab_updated_with_UML.dir\
   TARGET_PDB = Lab_updated_with_UML.pdb
 
+build CMakeFiles\Lab_updated_with_UML.dir\showdiffform.cpp.obj: CXX_COMPILER__Lab_updated_with_UML_Debug D$:\c++\Semester$ 4\Laboratorni1\Lab_updated_with_UML\showdiffform.cpp || cmake_object_order_depends_target_Lab_updated_with_UML
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I. -I"D:\c++\Semester 4\Laboratorni1\Lab_updated_with_UML" -ILab_updated_with_UML_autogen\include -IC:\Qt\Qt5.12.7\5.12.7\msvc2017\include -IC:\Qt\Qt5.12.7\5.12.7\msvc2017\include\QtWidgets -IC:\Qt\Qt5.12.7\5.12.7\msvc2017\include\QtGui -IC:\Qt\Qt5.12.7\5.12.7\msvc2017\include\QtANGLE -IC:\Qt\Qt5.12.7\5.12.7\msvc2017\include\QtCore -IC:\Qt\Qt5.12.7\5.12.7\msvc2017\.\mkspecs\win32-msvc
+  OBJECT_DIR = CMakeFiles\Lab_updated_with_UML.dir
+  OBJECT_FILE_DIR = CMakeFiles\Lab_updated_with_UML.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Lab_updated_with_UML.dir\
+  TARGET_PDB = Lab_updated_with_UML.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Lab_updated_with_UML
@@ -144,7 +153,7 @@ build CMakeFiles\Lab_updated_with_UML.dir\firstdateform.cpp.obj: CXX_COMPILER__L
 #############################################
 # Link the executable Lab_updated_with_UML.exe
 
-build Lab_updated_with_UML.exe: CXX_EXECUTABLE_LINKER__Lab_updated_with_UML_Debug CMakeFiles\Lab_updated_with_UML.dir\Lab_updated_with_UML_autogen\mocs_compilation.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\main.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\mainwindow.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\DateWithTime.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\DifferenceBetweenDateWithTime.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\TimeIsNow.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\TimeManagment.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\Test_Date.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\firstdateform.cpp.obj | C$:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Widgetsd.lib C$:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Guid.lib C$:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Cored.lib || Lab_updated_with_UML_autogen
+build Lab_updated_with_UML.exe: CXX_EXECUTABLE_LINKER__Lab_updated_with_UML_Debug CMakeFiles\Lab_updated_with_UML.dir\Lab_updated_with_UML_autogen\mocs_compilation.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\main.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\mainwindow.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\DateWithTime.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\DifferenceBetweenDateWithTime.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\TimeIsNow.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\TimeManagment.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\Test_Date.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\firstdateform.cpp.obj CMakeFiles\Lab_updated_with_UML.dir\showdiffform.cpp.obj | C$:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Widgetsd.lib C$:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Guid.lib C$:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Cored.lib || Lab_updated_with_UML_autogen
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Widgetsd.lib  C:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Guid.lib  C:\Qt\Qt5.12.7\5.12.7\msvc2017\lib\Qt5Cored.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

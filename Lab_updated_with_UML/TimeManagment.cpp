@@ -117,13 +117,15 @@ void TimeManagment::show_difference(int mode) {
 	cout << to_print << endl;
 }
 
-void TimeManagment::show_julian_calendar() {
+stringstream TimeManagment::show_julian_calendar() {
+    stringstream s;
 	DifferenceBetweenDateWithTime transfer_days_to_julian = DifferenceBetweenDateWithTime({ from_gregorian_to_julian(get_current_date_with_time()), 0, 0, 0 });
-	cout << "Current date_with_time in Julian calendar: " << date_with_time_minus_diff(get_current_date_with_time(), transfer_days_to_julian) << endl;
+    s << "Current date_with_time in Julian calendar: " << date_with_time_minus_diff(get_current_date_with_time(), transfer_days_to_julian) << endl;
 	transfer_days_to_julian = DifferenceBetweenDateWithTime({ from_gregorian_to_julian(date_with_time1), 0, 0, 0 });
-	cout << "Date_with_time1 in Julian calendar: " << date_with_time_minus_diff(date_with_time1, transfer_days_to_julian) << endl;
+    s << "Date_with_time1 in Julian calendar: " << date_with_time_minus_diff(date_with_time1, transfer_days_to_julian) << endl;
 	transfer_days_to_julian = DifferenceBetweenDateWithTime({ from_gregorian_to_julian(date_with_time2), 0, 0, 0 });
-	cout << "DateWithTime2 in Julian calendar: " << date_with_time_minus_diff(date_with_time2, transfer_days_to_julian) << endl;
+    s << "DateWithTime2 in Julian calendar: " << date_with_time_minus_diff(date_with_time2, transfer_days_to_julian) << endl;
+    return s;
 }
 
 int TimeManagment::week_in_month(int num_of_date_with_time) {
@@ -172,19 +174,20 @@ int TimeManagment::week_in_year(int num_of_date_with_time) {
 	return ammount_of_weeks;
 }
 
-void TimeManagment::alternative_insert_of_date_with_time(int num_of_date_with_time) {
-	DateWithTime chosen_date_with_time;
+stringstream TimeManagment::alternative_insert_of_date_with_time(int num_of_date_with_time) {
+    stringstream s;
+    DateWithTime chosen_date_with_time;
 	if (num_of_date_with_time == 0) {
 		chosen_date_with_time = get_current_date_with_time();
-		cout << "Alternative insert of current date_with_time: ";
+        s << "Alternative insert of current date_with_time: ";
 	}
 	else if (num_of_date_with_time == 1) {
 		chosen_date_with_time = date_with_time1;
-		cout << "Alternative insert of date_with_time1: ";
+        s << "Alternative insert of date_with_time1: ";
 	}
 	else {
 		chosen_date_with_time = date_with_time2;
-		cout << "Alternative insert of date_with_time2: ";
+        s << "Alternative insert of date_with_time2: ";
 	}
 
 	int num_of_weekday = week_in_month(num_of_date_with_time) - 1;
@@ -199,10 +202,11 @@ void TimeManagment::alternative_insert_of_date_with_time(int num_of_date_with_ti
 	if (num_of_weekday == 0) num_of_weekday = 1;
 
 	string numbers_in_words[5] = { "first", "second", "third", "fourth", "fifth" };
-	cout << numbers_in_words[num_of_weekday - 1] << " " << WEEK_DAY[get_weekday_of_date_with_time(num_of_date_with_time)] << " of "
+    s << numbers_in_words[num_of_weekday - 1] << " " << WEEK_DAY[get_weekday_of_date_with_time(num_of_date_with_time)] << " of "
 		<< MONTH_NAME[chosen_date_with_time.month - 1] << " " << chosen_date_with_time.year;
-	cout << setfill('0');
-	cout << " ( " << setw(2) << chosen_date_with_time.hour << ":" << setw(2) << chosen_date_with_time.minute << ":" << setw(2) << chosen_date_with_time.second << " ) " << endl;
+    s << setfill('0');
+    s << " ( " << setw(2) << chosen_date_with_time.hour << ":" << setw(2) << chosen_date_with_time.minute << ":" << setw(2) << chosen_date_with_time.second << " ) " << endl;
+    return s;
 }
 
 int TimeManagment::from_gregorian_to_julian(const DateWithTime& date_with_time) {

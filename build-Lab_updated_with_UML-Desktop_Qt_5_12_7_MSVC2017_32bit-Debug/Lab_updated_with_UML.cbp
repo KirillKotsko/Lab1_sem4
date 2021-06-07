@@ -176,6 +176,15 @@
 		<Unit filename="D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/mainwindow.ui">
 			<Option target="Lab_updated_with_UML"/>
 		</Unit>
+		<Unit filename="D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/showdiffform.cpp">
+			<Option target="Lab_updated_with_UML"/>
+		</Unit>
+		<Unit filename="D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/showdiffform.h">
+			<Option target="Lab_updated_with_UML"/>
+		</Unit>
+		<Unit filename="D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/showdiffform.ui">
+			<Option target="Lab_updated_with_UML"/>
+		</Unit>
 		<Unit filename="D:/c++/Semester 4/Laboratorni1/Lab_updated_with_UML/unit_test_framework.h">
 			<Option target="Lab_updated_with_UML"/>
 		</Unit>

@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>500</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="formButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>90</x>
       <y>160</y>
       <width>341</width>
       <height>111</height>
@@ -55,8 +55,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>80</y>
+      <x>70</x>
+      <y>90</y>
       <width>371</width>
       <height>41</height>
      </rect>
@@ -79,10 +79,10 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="quitButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>90</x>
       <y>280</y>
       <width>341</width>
       <height>71</height>
@@ -104,7 +104,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>500</width>
      <height>26</height>
     </rect>
    </property>
