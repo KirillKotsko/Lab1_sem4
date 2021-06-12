@@ -73,7 +73,9 @@ public:
 	DateWithTime date_with_time_minus_diff(DateWithTime date_with_time, DifferenceBetweenDateWithTime minus);
 	/**
 	* Method for user. Show difference between date_with_time1 and date_with_time2 which the user asked.
+    *
 	* @param mode for output.
+    * @return stream with info.
 	*/
     stringstream show_difference(int mode);
 	/**
@@ -126,6 +128,8 @@ public:
 	int from_gregorian_to_julian(const DateWithTime& date_with_time);
 	/**
 	* Show current date_with_time, date_with_time1, date_with_time2 in julian calendar.
+    *
+    * @return stream with info.
 	*/
     stringstream show_julian_calendar();
 
@@ -152,10 +156,16 @@ public:
 	int week_in_year(int num_of_date_with_time);
 	/**
 	* Show day of the week of current date_with_time, date_with_time1, date_with_time2.
+    *
+    * @param 0 - current date_with_time, 1 - date_with_time1, 2 - date_with_time2.
+    * @return stream with info.
 	*/
     stringstream day_of_the_week(int num_of_date_with_time);
 	/**
 	* Show alternative variant of date_with_time represent.
+    *
+    * @param 0 - current date_with_time, 1 - date_with_time1, 2 - date_with_time2.
+    * @return stream with info.
 	*/
     stringstream alternative_insert_of_date_with_time(int num_of_date_with_time);
 
