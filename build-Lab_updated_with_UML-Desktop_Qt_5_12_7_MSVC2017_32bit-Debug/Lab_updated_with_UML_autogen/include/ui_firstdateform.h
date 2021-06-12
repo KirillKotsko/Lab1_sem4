@@ -52,6 +52,8 @@ public:
         if (FirstDateForm->objectName().isEmpty())
             FirstDateForm->setObjectName(QString::fromUtf8("FirstDateForm"));
         FirstDateForm->resize(572, 328);
+        FirstDateForm->setMinimumSize(QSize(572, 328));
+        FirstDateForm->setMaximumSize(QSize(572, 328));
         buttonBox = new QDialogButtonBox(FirstDateForm);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setGeometry(QRect(210, 290, 341, 32));

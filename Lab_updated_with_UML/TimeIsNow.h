@@ -12,6 +12,7 @@
 #include <conio.h>
 #include <vector>
 #include <iomanip>
+#include <sstream>
 #include "DateWithTime.h"
 
 /**
@@ -29,11 +30,11 @@ public:
 	/**
 	* Method for user. Changes time zone.
 	*/
-	void change_GMT();
+    void change_GMT(int value);
 	/**
 	* Output current DateWithTime.
 	*/
-	void show_current_date_with_time();
+    stringstream show_current_date_with_time();
 	/**
 	* Method that get current date_with_time.
 	* @return current date_with_time

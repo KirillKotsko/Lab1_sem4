@@ -25,12 +25,8 @@ void MainWindow::on_formButton_clicked()
         tmp = data;
     });
     if(firstdate.exec()){
-        stringstream s1;
-        s1 = tmp.alternative_insert_of_date_with_time(0);
-        QMessageBox md;
-        md.setText(QString::fromStdString(s1.str()));
-        md.exec();
         show_diff_form.SetCurrentTimeManagment(tmp);
+        show_diff_form.change_info();
         show_diff_form.show();
     }
 }

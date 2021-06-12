@@ -75,7 +75,7 @@ public:
 	* Method for user. Show difference between date_with_time1 and date_with_time2 which the user asked.
 	* @param mode for output.
 	*/
-	void show_difference(int mode);
+    stringstream show_difference(int mode);
 	/**
 	* Method which add difference to current date_with_time or date_with_time1 or date_with_time2, which the user asked.
 	* @param 0 - current date_with_time, 1 - date_with_time1, 2 - date_with_time2.
@@ -115,7 +115,7 @@ public:
 	* Show the date_with_time from class TimeManagment.
 	* @param 0 - current date_with_time, 1 - date_with_time1, 2 - date_with_time2.
 	*/
-	void show_date_with_time(int num_of_date_with_time);
+    stringstream show_date_with_time(int num_of_date_with_time);
 
 	/**
 	* Function that calculate ammount of days that we need to substract.
@@ -153,7 +153,7 @@ public:
 	/**
 	* Show day of the week of current date_with_time, date_with_time1, date_with_time2.
 	*/
-	void day_of_the_week();
+    stringstream day_of_the_week(int num_of_date_with_time);
 	/**
 	* Show alternative variant of date_with_time represent.
 	*/

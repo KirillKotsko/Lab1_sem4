@@ -14,7 +14,6 @@ bool operator==(const DifferenceBetweenDateWithTime& lhs, const DifferenceBetwee
 }
 
 ostream& operator<<(ostream& os, const DifferenceBetweenDateWithTime& info) {
-	os << "Difference between DateWithTime1 and DateWithTime2 are ";
 	if (info.variant_of_output == 0)
 		os << info.days << " days, " << info.hour << " hours, " << info.minute << " minutes, " << info.seconds << " seconds. ";
 	else if (info.variant_of_output == 1)

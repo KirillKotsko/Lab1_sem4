@@ -41,7 +41,7 @@ bool TimeManagment::check_date_with_time(int num_of_date_with_time) {
 void TimeManagment::set_date_with_time(const DateWithTime& a, int num_of_date_with_time) {
 	if (num_of_date_with_time == 1) {
 		date_with_time1 = a;
-		if (!check_date_with_time(1)) {
+        if (!check_date_with_time(1)) {
 			date_with_time1 = get_current_date_with_time();
 		}
 	}
@@ -58,9 +58,11 @@ DateWithTime TimeManagment::get_date_with_time(int num_of_date_with_time) {
 	else return date_with_time2;
 }
 
-void TimeManagment::show_date_with_time(int num_of_date_with_time) {
-	if (num_of_date_with_time == 1) cout << "Date_with_time1: " << date_with_time1 << endl;
-	else cout << "Date_with_time2: " << date_with_time2 << endl;
+stringstream TimeManagment::show_date_with_time(int num_of_date_with_time) {
+    stringstream s;
+    if (num_of_date_with_time == 1) s << date_with_time1;
+    else s << date_with_time2;
+    return s;
 }
 
 // Details: https://lifehacker.ru/kakoj-den-nedeli/.
@@ -80,13 +82,10 @@ int TimeManagment::get_weekday_of_date_with_time(int num_of_date_with_time) {
 	return result;
 }
 
-void TimeManagment::day_of_the_week() {
-	show_current_date_with_time();
-	cout << "Current date_with_time day of the week: " << WEEK_DAY[get_weekday_of_date_with_time(0)] << endl;
-	show_date_with_time(1);
-	cout << "Date_with_time1 day of the week: " << WEEK_DAY[get_weekday_of_date_with_time(1)] << endl;
-	show_date_with_time(2);
-	cout << "Date_with_time2 day of the week: " << WEEK_DAY[get_weekday_of_date_with_time(2)] << endl;
+stringstream TimeManagment::day_of_the_week(int num_of_date_with_time) {
+    stringstream s;
+    s << WEEK_DAY[get_weekday_of_date_with_time(num_of_date_with_time)];
+    return s;
 }
 
 DifferenceBetweenDateWithTime TimeManagment::get_difference() {
@@ -111,20 +110,22 @@ DateWithTime TimeManagment::substract_difference(int num_of_date_with_time, Diff
 	return date_with_time_minus_diff(chosen_date_with_time, to_substract);
 }
 
-void TimeManagment::show_difference(int mode) {
-	DifferenceBetweenDateWithTime to_print = get_difference();
+stringstream TimeManagment::show_difference(int mode) {
+    stringstream s;
+    DifferenceBetweenDateWithTime to_print = get_difference();
 	to_print.change_variant_of_output(mode);
-	cout << to_print << endl;
+    s << to_print;
+    return s;
 }
 
 stringstream TimeManagment::show_julian_calendar() {
     stringstream s;
 	DifferenceBetweenDateWithTime transfer_days_to_julian = DifferenceBetweenDateWithTime({ from_gregorian_to_julian(get_current_date_with_time()), 0, 0, 0 });
-    s << "Current date_with_time in Julian calendar: " << date_with_time_minus_diff(get_current_date_with_time(), transfer_days_to_julian) << endl;
+    s << "Сьогодні: " << date_with_time_minus_diff(get_current_date_with_time(), transfer_days_to_julian) << endl;
 	transfer_days_to_julian = DifferenceBetweenDateWithTime({ from_gregorian_to_julian(date_with_time1), 0, 0, 0 });
-    s << "Date_with_time1 in Julian calendar: " << date_with_time_minus_diff(date_with_time1, transfer_days_to_julian) << endl;
+    s << "Перша дата: " << date_with_time_minus_diff(date_with_time1, transfer_days_to_julian) << endl;
 	transfer_days_to_julian = DifferenceBetweenDateWithTime({ from_gregorian_to_julian(date_with_time2), 0, 0, 0 });
-    s << "DateWithTime2 in Julian calendar: " << date_with_time_minus_diff(date_with_time2, transfer_days_to_julian) << endl;
+    s << "Друга дата: " << date_with_time_minus_diff(date_with_time2, transfer_days_to_julian) << endl;
     return s;
 }
 
@@ -177,18 +178,15 @@ int TimeManagment::week_in_year(int num_of_date_with_time) {
 stringstream TimeManagment::alternative_insert_of_date_with_time(int num_of_date_with_time) {
     stringstream s;
     DateWithTime chosen_date_with_time;
-	if (num_of_date_with_time == 0) {
-		chosen_date_with_time = get_current_date_with_time();
-        s << "Alternative insert of current date_with_time: ";
-	}
-	else if (num_of_date_with_time == 1) {
-		chosen_date_with_time = date_with_time1;
-        s << "Alternative insert of date_with_time1: ";
-	}
-	else {
-		chosen_date_with_time = date_with_time2;
-        s << "Alternative insert of date_with_time2: ";
-	}
+    if (num_of_date_with_time == 0) {
+        chosen_date_with_time = get_current_date_with_time();
+    }
+    else if (num_of_date_with_time == 1) {
+        chosen_date_with_time = date_with_time1;
+    }
+    else {
+        chosen_date_with_time = date_with_time2;
+    }
 
 	int num_of_weekday = week_in_month(num_of_date_with_time) - 1;
 	int special_code_of_weekday = get_weekday_of_date_with_time(num_of_date_with_time);

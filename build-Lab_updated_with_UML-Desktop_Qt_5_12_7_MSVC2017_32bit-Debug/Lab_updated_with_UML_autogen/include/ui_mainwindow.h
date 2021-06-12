@@ -34,12 +34,14 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(500, 500);
+        MainWindow->resize(505, 405);
+        MainWindow->setMinimumSize(QSize(505, 405));
+        MainWindow->setMaximumSize(QSize(505, 405));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         formButton = new QPushButton(centralwidget);
         formButton->setObjectName(QString::fromUtf8("formButton"));
-        formButton->setGeometry(QRect(90, 160, 341, 111));
+        formButton->setGeometry(QRect(90, 130, 341, 111));
         QFont font;
         font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(20);
@@ -54,7 +56,7 @@ public:
         formButton->setFlat(false);
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(70, 90, 371, 41));
+        label->setGeometry(QRect(70, 60, 371, 41));
         QFont font1;
         font1.setFamily(QString::fromUtf8("Times New Roman"));
         font1.setPointSize(20);
@@ -65,7 +67,7 @@ public:
         label->setAlignment(Qt::AlignCenter);
         quitButton = new QPushButton(centralwidget);
         quitButton->setObjectName(QString::fromUtf8("quitButton"));
-        quitButton->setGeometry(QRect(90, 280, 341, 71));
+        quitButton->setGeometry(QRect(90, 250, 341, 71));
         QFont font2;
         font2.setFamily(QString::fromUtf8("Times New Roman"));
         font2.setPointSize(20);
@@ -73,7 +75,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 500, 26));
+        menubar->setGeometry(QRect(0, 0, 505, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
